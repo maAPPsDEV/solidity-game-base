@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.5 <0.9.0;
+pragma solidity ^0.6.0;
 
 contract Hacker {
   address public hacker;
@@ -9,7 +9,7 @@ contract Hacker {
     _;
   }
 
-  constructor() {
+  constructor() public {
     hacker = payable(msg.sender);
   }
 
